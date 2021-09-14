@@ -21,6 +21,10 @@ router.post('/',(request,response) => {
         if (err) throw err;
         console.log(`The ${JSON.stringify(request.body)} was appended to file!`);
     });
+    fs.appendFile('list.txt', '\n', function (err) {
+        if (err) throw err;
+        console.log(`The ${JSON.stringify(request.body)} was appended to file!`);
+    });
 });
 
 app.use("/", router);
